@@ -1,0 +1,74 @@
+
+sudo apt-get install -y autoconf libonig-dev libedit-dev bison re2c valgrind gdb sqlite3 libsqlite3-dev libffi-dev libsodium-dev libzip-dev libcurl4-openssl-dev libkrb5-dev libldap2-dev librtmp-dev libssh2-1-dev libbz2-dev libgd-dev libpth-dev libxml2-dev libc-client-dev libgdsii-dev firebird-dev libpspell-dev libpq-dev libxslt-dev libsnmp-dev;
+
+./buildconf;
+
+./configure \
+--enable-fpm \
+--with-fpm-systemd \
+--enable-phpdbg \
+--enable-phpdbg-webhelper \
+--enable-phpdbg-debug \
+--enable-phpdbg-readline \
+--with-valgrind \
+--enable-debug \
+--enable-sigchild \
+--with-openssl \
+--with-kerberos \
+--with-system-ciphers \
+--with-external-pcre=./pcre2-10.34/src \
+--with-pcre-jit=./pcre2-10.34/src  \
+--with-zlib \
+--enable-bcmath \
+--enable-calendar \
+--with-curl \
+--enable-dba \
+--enable-exif \
+--with-ffi \
+--enable-ftp \
+--enable-gd \
+--with-external-gd \
+--with-webp \
+--with-jpeg \
+--with-xpm \
+--with-freetype \
+--enable-gd-jis-conv \
+--with-gettext \
+--with-gmp \
+--with-mhash \
+--with-imap \
+--with-kerberos \
+--with-imap-ssl \
+--enable-intl \
+--with-ldap-sasl \
+--enable-mbstring \
+--with-mysqli \
+--with-pdo-mysql \
+--with-pdo-firebird \
+--enable-pcntl \
+--with-pdo-pgsql \
+--with-pgsql \
+--with-pspell \
+--with-libedit \
+--with-readline \
+--enable-shmop \
+--with-snmp \
+--enable-soap \
+--enable-sockets \
+--with-sodium \
+--enable-sysvmsg \
+--enable-sysvsem \
+--enable-sysvshm \
+--with-zip \
+--enable-mysqlnd \
+--with-xsl \
+--with-expat \
+--with-xmlrpc \
+--with-pear \
+--enable-maintainer-zts \
+--with-tsrm-pth=TSRM/ \
+--with-tsrm-st \
+--with-tsrm-pthreads \
+--with-gnu-ld \
+--with-pic \
+--with-config-file-path=/etc/php/7.4/php.ini;
